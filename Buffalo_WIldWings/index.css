@@ -1,0 +1,17 @@
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.rightside{
+    display: flex;
+    gap: 20px;
+}
+.verticaline{
+    border: 1px solid black;
+    height: 50px;
+}
+.cartimg{
+    height: 50px;
+}
+.startanorderbtn{
+    width: 200px;
+}
