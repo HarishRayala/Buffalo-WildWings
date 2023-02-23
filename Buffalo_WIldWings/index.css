@@ -1,17 +1,89 @@
 *{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
-.rightside{
+.nav-item{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.beforeinspectsignin{
     display: flex;
-    gap: 20px;
+    align-items: center;
+    display: none;
 }
 .verticaline{
-    border: 1px solid black;
+    border-right: 1px solid black;
     height: 50px;
 }
 .cartimg{
     height: 50px;
 }
+.rightside{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+.rightside>a{
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
 .startanorderbtn{
-    width: 200px;
+    width: 120px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 0 20px;
+    background-color: #ffc600;
+    min-height: 44px;
+}
+.largestartorderbtn{
+    width: 100%;
+    display: none;
+}
+
+@media only screen and (max-width:991px){
+    .startanorderbtn{
+        display: none;
+    }
+    .largestartorderbtn{
+        display: block;
+        background-color: #ffc600;
+        border: none;
+        font-size: 16px;
+        padding: 0px 20px;
+        min-height: 44px;
+        font-weight: bolder;
+    }
+    .beforeinspectsignin{
+        display: block;
+        display: flex;
+        gap: 10px;
+        font-size: 22px;
+    }
+    .beforeinspectsignin>a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    .line{
+        height: 45px;
+        border-left: 1px solid black;
+    }
+    .rightside{
+        display: none;
+    }
+    .nav-link{
+        text-align: center;
+    }
+    .navbar-toggler{
+        border: none;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
 }
