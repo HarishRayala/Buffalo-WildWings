@@ -17,7 +17,8 @@
   <body>
     <nav>
       <i></i>
-      <a href="./index.html"><img src="./images/logo.svg" alt="logo" /></a>
+      <a id="logoWithText" href="./index.html"><img src="./images/logo.svg" alt="logoWithText" /></a>
+      <a id="logo" href="./index.html"><img src="./images/buffalowithwings.svg" alt="logo"></a>
       <a href="./index.html"><i class="fa-2x fa-solid fa-xmark"></i></a>
     </nav>
     <main>
@@ -29,7 +30,7 @@
         <form>
           <h1>CREATE AN ACCOUNT</h1>
           <label for="firstName">FIRST NAME</label>
-          <input
+          <input class="inputs"
             type="text"
             id="firstName"
             placeholder="Enter first name"
@@ -37,7 +38,7 @@
           />
 
           <label for="lastName">LAST NAME</label>
-          <input
+          <input class="inputs"
             type="text"
             id="lastName"
             placeholder="Enter last name"
@@ -45,7 +46,7 @@
           />
 
           <label for="email">E-MAIL</label>
-          <input
+          <input class="inputs"
             type="email"
             id="email"
             placeholder="Enter email address"
@@ -53,7 +54,7 @@
           />
 
           <label for="phoneNo">PHONE NUMBER</label>
-          <input
+          <input class="inputs"
             type="number"
             id="phoneNo"
             placeholder="Enter phone Number"
@@ -61,10 +62,10 @@
           />
 
           <label for="dob">DATE OF BIRTH</label>
-          <input type="date" id="dob" required />
+          <input class="inputs" type="text" id="dob" placeholder="MM/DD/YYYY" required />
 
           <label for="zipcode">ZIP CODE</label>
-          <input
+          <input class="inputs"
             type="number"
             id="zipcode"
             placeholder="Enter ZIP code"
@@ -72,12 +73,22 @@
           />
 
           <label for="password">PASSWORD</label>
-          <input
+          <input class="inputs"
             type="password"
             id="password"
             placeholder="Enter password"
             required
           />
+          <p id="pwdRule">(Min. 8 characters and must contain: one upper case letter, one lower case letter, a number and a special character.)</p>
+
+          <div class="checkboxes">
+            <input type="checkbox"/><span>Yes! I want to receive offers and marketing messages from Buffalo Wild Wings. Please see our <u><strong>PRIVACY POLICY</strong></u> for more information.</span>
+          </div>
+          <div class="checkboxes">
+            <input type="checkbox"><span>I have read and agree to the <u><strong>TERMS AND CONDITIONS</strong></u>.</span>
+          </div>
+          <button id="submitBtn" type="submit">CREATE AN ACCOUNT</button>
+          <button id="signInBtn">Already a member? <strong><a href="./index.html">SIGN IN</a></strong></button>
         </form>
       </div>
     </main>
