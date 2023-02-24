@@ -15,6 +15,7 @@ const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&
 for(let i=0;i<inputs.length;i++){
     inputs[i].addEventListener("focusout",()=>{
         if(inputs[i].value==""){
+            fieldsFilled[i]=false;
             errMsg[i].style.display="block";
             errMsg[i].textContent=`${inputFields[i]} is incomplete`;
         }else{
@@ -24,31 +25,30 @@ for(let i=0;i<inputs.length;i++){
             if(err==""){
                 fieldsFilled[i]=true;
                 errMsg[i].style.display="none";
-                errMsg[i].textContent="";
-                AllFieldsFilled();
             }else{
                 fieldsFilled[i]=false;
                 errMsg[i].style.display="block";
-                errMsg[i].textContent=err;
             }
+            errMsg[i].textContent=err;
+            AllFieldsFilled();
         }
     })
 }
 function privacyPolicy(){
     if(checkbox[0].checked==true){
         fieldsFilled[7]=true;
-        AllFieldsFilled();
     }else{
         fieldsFilled[7]=false;
     }
+    AllFieldsFilled();
 }
 function termsAndConditions(){
     if(checkbox[1].checked==true){
         fieldsFilled[8]=true;
-        AllFieldsFilled();
     }else{
         fieldsFilled[8]=false;
     }
+    AllFieldsFilled();
 }
 function AllFieldsFilled(){
     let flag=true;
