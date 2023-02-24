@@ -51,11 +51,6 @@ function termsAndConditions(){
     }
 }
 function AllFieldsFilled(){
-    // let noOfCheckBoxesChecked=0;
-    // for(let i=0;i<checkbox.length;i++){
-    //     if(checkbox[i].checked==true)
-    //         noOfCheckBoxesChecked++;
-    // }
     let flag=true;
     for(let i=0;i<fieldsFilled.length;i++){
         if(fieldsFilled[i]==false){
