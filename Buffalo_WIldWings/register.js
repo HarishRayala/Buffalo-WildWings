@@ -4,6 +4,7 @@ let inputFields=["First Name", "Last Name", "Email", "Phone Number", "Birthdate"
 let submitBtn=document.querySelector("#submitBtn");
 submitBtn.disabled="true";
 let checkbox=document.querySelectorAll(".check");
+let fieldsFilled=[false, false, false, false, false, false, false, false, false];
 
 const nameRegex = /^[A-Za-z]{2,30}/;
 const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
@@ -20,27 +21,43 @@ for(let i=0;i<inputs.length;i++){
             // let err="";
             let inputValue=inputs[i].value;
             let err=validateData(i,inputValue);
-            console.log(err);
             if(err==""){
+                fieldsFilled[i]=true;
                 errMsg[i].style.display="none";
                 errMsg[i].textContent="";
+                AllFieldsFilled();
             }else{
+                fieldsFilled[i]=false;
                 errMsg[i].style.display="block";
                 errMsg[i].textContent=err;
             }
         }
     })
 }
-
-function checkToEnable(){
-    console.log(1);
-    let noOfCheckBoxesChecked=0;
-    for(let i=0;i<checkbox.length;i++){
-        if(checkbox[i].checked==true)
-            noOfCheckBoxesChecked++;
+function privacyPolicy(){
+    if(checkbox[0].checked==true){
+        fieldsFilled[7]=true;
+        AllFieldsFilled();
+    }else{
+        fieldsFilled[7]=false;
     }
-    console.log(noOfCheckBoxesChecked);
-    if(noOfCheckBoxesChecked==2) {
+}
+function termsAndConditions(){
+    if(checkbox[1].checked==true){
+        fieldsFilled[8]=true;
+        AllFieldsFilled();
+    }else{
+        fieldsFilled[8]=false;
+    }
+}
+function AllFieldsFilled(){
+    let flag=true;
+    for(let i=0;i<fieldsFilled.length;i++){
+        if(fieldsFilled[i]==false){
+            flag=false; break;
+        }
+    }
+    if(flag) {
         submitBtn.disabled=false;
         submitBtn.style.cssText="background-color: #ffc600; color: #382c2c;"
     }
