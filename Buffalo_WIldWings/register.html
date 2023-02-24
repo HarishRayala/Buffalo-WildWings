@@ -17,8 +17,12 @@
   <body>
     <nav>
       <i></i>
-      <a id="logoWithText" href="./index.html"><img src="./images/logo.svg" alt="logoWithText" /></a>
-      <a id="logo" href="./index.html"><img src="./images/buffalowithwings.svg" alt="logo"></a>
+      <a id="logoWithText" href="./index.html"
+        ><img src="./images/logo.svg" alt="logoWithText"
+      /></a>
+      <a id="logo" href="./index.html"
+        ><img src="./images/buffalowithwings.svg" alt="logo"
+      /></a>
       <a href="./index.html"><i class="fa-2x fa-solid fa-xmark"></i></a>
     </nav>
     <main>
@@ -30,7 +34,8 @@
         <form>
           <h1>CREATE AN ACCOUNT</h1>
           <label for="firstName">FIRST NAME</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="text"
             id="firstName"
             placeholder="Enter first name"
@@ -39,7 +44,8 @@
           <p class="errMsg"></p>
 
           <label for="lastName">LAST NAME</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="text"
             id="lastName"
             placeholder="Enter last name"
@@ -48,7 +54,8 @@
           <p class="errMsg"></p>
 
           <label for="email">E-MAIL</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="email"
             id="email"
             placeholder="Enter email address"
@@ -57,45 +64,79 @@
           <p class="errMsg"></p>
 
           <label for="phoneNo">PHONE NUMBER</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="number"
             id="phoneNo"
             placeholder="Enter phone Number"
             required
           />
-          <p style="display: none;" class="errMsg"></p>
+          <p style="display: none" class="errMsg"></p>
 
           <label for="dob">DATE OF BIRTH</label>
-          <input class="inputs" type="text" onfocus="(this.type='date')" id="dob" placeholder="MM/DD/YYYY" required />
-          <p style="display: none;" class="errMsg"></p>
+          <input
+            class="inputs"
+            type="text"
+            onfocus="(this.type='date')"
+            id="dob"
+            placeholder="MM/DD/YYYY"
+            required
+          />
+          <p style="display: none" class="errMsg"></p>
 
           <label for="zipcode">ZIP CODE</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="number"
             id="zipcode"
             placeholder="Enter ZIP code"
             required
           />
-          <p style="display: none;" class="errMsg"></p>
+          <p style="display: none" class="errMsg"></p>
 
           <label for="password">PASSWORD</label>
-          <input class="inputs"
+          <input
+            class="inputs"
             type="password"
             id="password"
             placeholder="Enter password"
             required
           />
-          <p style="display: none;" class="errMsg"></p>
-          <p id="pwdRule">(Min. 8 characters and must contain: one upper case letter, one lower case letter, a number and a special character.)</p>
+          <p style="display: none" class="errMsg"></p>
+          <p id="pwdRule">
+            (Min. 8 characters and must contain: one upper case letter, one
+            lower case letter, a number and a special character.)
+          </p>
 
           <div class="checkboxes">
-            <input class="check" type="checkbox" onclick="checkToEnable();"/><span>Yes! I want to receive offers and marketing messages from Buffalo Wild Wings. Please see our <u><strong>PRIVACY POLICY</strong></u> for more information.</span>
+            <input
+              class="check"
+              type="checkbox"
+              onclick="privacyPolicy();"
+            /><span
+              >Yes! I want to receive offers and marketing messages from Buffalo
+              Wild Wings. Please see our
+              <u><strong>PRIVACY POLICY</strong></u> for more information.</span
+            >
           </div>
           <div class="checkboxes">
-            <input class="check" type="checkbox" onclick="checkToEnable();"><span>I have read and agree to the <u><strong>TERMS AND CONDITIONS</strong></u>.</span>
+            <input
+              class="check"
+              type="checkbox"
+              onclick="termsAndConditions();"
+            /><span
+              >I have read and agree to the
+              <u><strong>TERMS AND CONDITIONS</strong></u
+              >.</span
+            >
           </div>
-          <button id="submitBtn" type="submit" disabled>CREATE AN ACCOUNT</button>
-          <button id="signInBtn">Already a member? <strong><a href="./Signin.html">SIGN IN</a></strong></button>
+          <button id="submitBtn" type="submit" disabled>
+            CREATE AN ACCOUNT
+          </button>
+          <button id="signInBtn">
+            Already a member?
+            <strong><a href="./Signin.html">SIGN IN</a></strong>
+          </button>
         </form>
       </div>
     </main>

@@ -16,7 +16,7 @@ nav a i {
   text-decoration: none;
   color: #382c2c;
 }
-#logo{
+#logo {
   display: none;
 }
 main {
@@ -47,6 +47,7 @@ main .form {
   margin: auto;
   background-color: white;
   max-width: 850px;
+  border-radius: 6px;
 }
 form {
   display: flex;
@@ -60,7 +61,7 @@ form .inputs {
   font-size: 16px;
   font-weight: 400;
 }
-form label{
+form label {
   margin-top: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -70,15 +71,15 @@ form h1 {
   font-weight: 900;
   margin-top: 0;
 }
-form label::after{
+form label::after {
   content: " *";
   color: red;
 }
-#pwdRule{
+#pwdRule {
   margin: 0px;
   color: gray;
 }
-.checkboxes{
+.checkboxes {
   padding: 20px 0px 0px;
   display: flex;
   align-items: center;
@@ -86,50 +87,50 @@ form label::after{
   font-weight: 400;
   color: gray;
 }
-.checkboxes input{
+.checkboxes input {
   height: 25px;
   width: 25px;
 }
-.checkboxes input[type=checkbox]{
+.checkboxes input[type="checkbox"] {
   accent-color: #382e2c;
 }
-button{
+button {
   padding: 15px;
   font-size: 18px;
   border: none;
 }
-button a{
+button a {
   text-decoration: none;
   color: #382c2c;
 }
-#submitBtn{
+#submitBtn {
   font-weight: 800;
   width: 95%;
   margin: auto;
   margin-top: 20px;
   color: white;
-  background-color: #cdcdcd; 
-   /* background-color: #ffc600;  */
+  background-color: #cdcdcd;
+  /* background-color: #ffc600;  */
   /* color: #382c2c; */
 }
-#signInBtn{
+#signInBtn {
   margin-top: 20px;
   font-weight: 400;
   background-color: #cdcbca;
   color: #382c2c;
 }
-.errMsg{
+.errMsg {
   font-size: 12px;
   color: red;
   margin: 0px;
 }
-@media screen and (max-width:960px){
-  #logo{
-    display:block;
+@media screen and (max-width: 960px) {
+  #logo {
+    display: block;
     height: 50px;
     width: 50px;
   }
-  #logoWithText{
+  #logoWithText {
     display: none;
   }
 }
