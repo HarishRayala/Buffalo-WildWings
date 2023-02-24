@@ -36,6 +36,7 @@
             placeholder="Enter first name"
             required
           />
+          <p class="errMsg"></p>
 
           <label for="lastName">LAST NAME</label>
           <input class="inputs"
@@ -44,6 +45,7 @@
             placeholder="Enter last name"
             required
           />
+          <p class="errMsg"></p>
 
           <label for="email">E-MAIL</label>
           <input class="inputs"
@@ -52,6 +54,7 @@
             placeholder="Enter email address"
             required
           />
+          <p class="errMsg"></p>
 
           <label for="phoneNo">PHONE NUMBER</label>
           <input class="inputs"
@@ -60,10 +63,12 @@
             placeholder="Enter phone Number"
             required
           />
+          <p style="display: none;" class="errMsg"></p>
 
           <label for="dob">DATE OF BIRTH</label>
           <input class="inputs" type="text" id="dob" placeholder="MM/DD/YYYY" required />
-          
+          <p style="display: none;" class="errMsg"></p>
+
           <label for="zipcode">ZIP CODE</label>
           <input class="inputs"
             type="number"
@@ -71,6 +76,7 @@
             placeholder="Enter ZIP code"
             required
           />
+          <p style="display: none;" class="errMsg"></p>
 
           <label for="password">PASSWORD</label>
           <input class="inputs"
@@ -79,6 +85,7 @@
             placeholder="Enter password"
             required
           />
+          <p style="display: none;" class="errMsg"></p>
           <p id="pwdRule">(Min. 8 characters and must contain: one upper case letter, one lower case letter, a number and a special character.)</p>
 
           <div class="checkboxes">
@@ -93,4 +100,5 @@
       </div>
     </main>
   </body>
+  <script src="./register.js"></script>
 </html>
