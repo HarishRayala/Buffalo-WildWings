@@ -40,7 +40,14 @@ function checkToEnable(){
             noOfCheckBoxesChecked++;
     }
     console.log(noOfCheckBoxesChecked);
-    if(noOfCheckBoxesChecked==2) submitBtn.disabled=false;
+    if(noOfCheckBoxesChecked==2) {
+        submitBtn.disabled=false;
+        submitBtn.style.cssText="background-color: #ffc600; color: #382c2c;"
+    }
+    else {
+        submitBtn.disabled=true;
+        submitBtn.style.cssText="color: white; background-color: #cdcdcd; "
+    }
 }
 
 function validateData(index,value){

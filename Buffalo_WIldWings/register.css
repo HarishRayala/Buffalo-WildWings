@@ -90,12 +90,8 @@ form label::after{
   height: 25px;
   width: 25px;
 }
-.checkboxes input[type=checkbox]:checked {
-  background-color: #a77e2d !important;
-  color: black !important;
-}
-.checkboxes input[type='checkbox']:after {
-  box-shadow: none !important;
+.checkboxes input[type=checkbox]{
+  accent-color: #382e2c;
 }
 button{
   padding: 15px;
@@ -111,9 +107,9 @@ button a{
   width: 95%;
   margin: auto;
   margin-top: 20px;
-  /* color: white;
-  background-color: #cdcdcd; */
-  /* background-color: #ffc600; */
+  color: white;
+  background-color: #cdcdcd; 
+   /* background-color: #ffc600;  */
   /* color: #382c2c; */
 }
 #signInBtn{
