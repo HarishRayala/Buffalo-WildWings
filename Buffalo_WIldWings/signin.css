@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700;900&display=swap");
+
+body {
+  margin: 0px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+nav {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  /* margin: 0px; */
+}
+nav a i {
+  text-decoration: none;
+  color: #382c2c;
+}
+#logo{
+  display: none;
+}
+main {
+  background-image: url(./images/takeover-image.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 0px 40px 60px;
+  margin: 0px;
+  /* background-size: auto; */
+}
+main .heading {
+  color: white;
+  text-align: center;
+  padding: 5% 0px;
+}
+main .heading h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0px;
+}
+main .heading h2 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0px;
+}
+
+main .form {
+  margin: auto;
+  background-color: white;
+  max-width: 850px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  color: #382c2c;
+}
+form .inputs {
+  margin: 10px 0px 0px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+form label{
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+form h1 {
+  font-size: 38px;
+  font-weight: 900;
+  margin-top: 0;
+}
+form label::after{
+  content: " *";
+  color: red;
+}
+#pwdRule{
+  margin: 0px;
+  color: gray;
+}
+.checkboxes{
+  padding: 20px 0px 0px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+.checkboxes input{
+  height: 25px;
+  width: 25px;
+}
+.checkboxes input[type=checkbox]:checked {
+  background-color: #a77e2d !important;
+  color: black !important;
+}
+.checkboxes input[type='checkbox']:after {
+  box-shadow: none !important;
+}
+button{
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+}
+button a{
+  text-decoration: none;
+  color: #382c2c;
+}
+#submitBtn{
+  font-weight: 800;
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  /* color: white;
+  background-color: #cdcdcd; */
+  background-color: #ffc600;
+  color: #382c2c;
+}
+#signInBtn{
+  margin-top: 20px;
+  font-weight: 400;
+  background-color: #cdcbca;
+  color: #382c2c;
+}
+.bottom{
+  background-color: #e3e1de;
+  text-align: center;
+  padding: 20px;
+}
+.bottom>h2{
+  color: #946037;
+  margin: 0px;
+  font-size: 20px;
+}
+.bottom>h1{
+  margin: 0px;
+  font-size: 26px;
+}
+.bottom>a{
+  color: black;
+  font-weight: 600;
+  line-height: 40px;
+}
+@media screen and (max-width:960px){
+  #logo{
+    display:block;
+    height: 50px;
+    width: 50px;
+  }
+  #logoWithText{
+    display: none;
+  }
+}
