@@ -30,8 +30,8 @@ for(let i=0;i<inputs.length;i++){
                 errMsg[i].style.display="block";
             }
             errMsg[i].textContent=err;
-            AllFieldsFilled();
         }
+        AllFieldsFilled();
     })
 }
 function privacyPolicy(){
