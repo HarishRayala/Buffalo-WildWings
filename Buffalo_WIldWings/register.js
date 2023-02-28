@@ -8,12 +8,13 @@ let fieldsFilled= new Array(9).fill(false);
 
 const nameRegex = /^[A-Za-z]{2,30}/;
 const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+const dobRegex= /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/;
 const phoneRegex=/^[6789][0-9]{9}/;
 const zipCodeRegex=/^[0-9]{6}/;
 const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 for(let i=0;i<inputs.length;i++){
-    inputs[i].addEventListener("focusout",()=>{
+    inputs[i].addEventListener("change",()=>{
         // console.log(inputs[i].value);
         if(inputs[i].value==""){
             fieldsFilled[i]=false;
@@ -79,8 +80,8 @@ function validateData(index,value){
         if(phoneRegex.test(value)) return "";
         else return "Phone Number Invalid";
     }else if(index==4){
-        console.log(value);
-        return "";
+        if(dobRegex.test(value)) return "";
+        else return "Date of Birth Invalid";
     }else if(index==5){
         if(zipCodeRegex.test(value)) return "";
         else return "ZIP Code invalid";
@@ -114,7 +115,7 @@ function registerData(e){
             lastName: inputs[1].value,
             email: inputs[2].value,
             phone: inputs[3].value,
-            dob: inputs[4].value,
+            dob: inputs[4].value.toString("DD-MM-YYYY"),
             zipCode: inputs[5].value,
             password:inputs[6].value
         }
