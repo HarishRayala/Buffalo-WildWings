@@ -4,7 +4,7 @@ let inputFields=["First Name", "Last Name", "Email", "Phone Number", "Birthdate"
 let submitBtn=document.querySelector("#submitBtn");
 submitBtn.disabled="true";
 let checkbox=document.querySelectorAll(".check");
-let fieldsFilled=[false, false, false, false, false, false, false, false, false];
+let fieldsFilled= new Array(9).fill(false);
 
 const nameRegex = /^[A-Za-z]{2,30}/;
 const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
@@ -63,7 +63,7 @@ function AllFieldsFilled(){
     }
     else {
         submitBtn.disabled=true;
-        submitBtn.style.cssText="color: white; background-color: #cdcdcd; "
+        submitBtn.style.cssText="color: white; background-color: #cdcdcd;";
     }
 }
 
@@ -78,6 +78,7 @@ function validateData(index,value){
         if(phoneRegex.test(value)) return "";
         else return "Phone Number Invalid";
     }else if(index==4){
+        console.log(value);
         return "";
     }else if(index==5){
         if(zipCodeRegex.test(value)) return "";
@@ -86,4 +87,40 @@ function validateData(index,value){
         if(pwdRegex.test(value)) return "";
         else return "Incorrect password format";
     }
+}
+//LocalStorage
+document.querySelector("form").addEventListener("submit",registerData);
+let identity=JSON.parse(localStorage.getItem("idNumber"))||101;
+let usersData=JSON.parse(localStorage.getItem("users"))||[];
+function registerData(e){
+    e.preventDefault();
+    let userExists=false;
+    usersData.map((user)=>{
+       if(user.email===inputs[2].value){
+            userExists=true;
+       } 
+    })
+    if(userExists){
+        errMsg[7].textContent="User Already Exists. Please SignIn";
+        errMsg[7].style.cssText="display:block;text-align:center;font-size:18px;";
+        submitBtn.disabled=true;
+        submitBtn.style.cssText="color: white; background-color: #cdcdcd;";
+    }else{
+        let newUser={
+            id: identity++,
+            firstName: inputs[0].value,
+            lastName: inputs[1].value,
+            email: inputs[2].value,
+            phone: inputs[3].value,
+            dob: inputs[4].value,
+            zipCode: inputs[5].value,
+            password:inputs[6].value
+        }
+        // console.log(newUser);
+        usersData.push(newUser);
+        localStorage.setItem("users",JSON.stringify(usersData));
+        localStorage.setItem("idNumber",JSON.stringify(identity));
+        window.location.href="./Signin.html";
+    }
+    
 }
