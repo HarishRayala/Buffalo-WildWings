@@ -4,7 +4,21 @@ let currentUser=[];
 let errormsg=document.querySelector("#errormsg");
 errormsg.style.cssText="display:none"
 let submitBtn=document.querySelector("#submitBtn");
+submitBtn.disabled=true
 submitBtn.style.cssText="color: white; background-color: #cdcdcd;";
+let inputbox=document.querySelectorAll(".inputs");
+
+for(let i=0;i<inputbox.length;i++){
+    inputbox[i].addEventListener("change",()=>{
+        console.log(inputbox);
+        if(inputbox[0].value.length>0 && inputbox[1].value.length>0){
+            submitBtn.disabled=false
+            submitBtn.style.cssText="background-color: #ffc600; color: #382c2c;"
+        }
+    })
+}
+
+
 function UsersSignin(e){
     e.preventDefault(e);
     let email=document.querySelector("#email").value;
@@ -17,11 +31,10 @@ function UsersSignin(e){
                         email:email,
                         password:password
                     }
-                    console.log(userDetails)
+                    // console.log(userDetails)
                     currentUser.push(userDetails)
-                    localStorage.setItem("currentUser",JSON.stringify(userDetails))
-                    submitBtn.disabled=false;
-                    submitBtn.style.cssText="background-color: #ffc600; color: #382c2c;"
+                    localStorage.setItem("currentUser",JSON.stringify(userDetails));
+                    window.location.href="./index.html"
                 }else{
                     errormsg.textContent="Incorrect Password";
                     errormsg.style.cssText="display:block;color:red;font-size:18px;text-align:center"
