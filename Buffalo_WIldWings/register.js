@@ -14,6 +14,7 @@ const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&
 
 for(let i=0;i<inputs.length;i++){
     inputs[i].addEventListener("focusout",()=>{
+        // console.log(inputs[i].value);
         if(inputs[i].value==""){
             fieldsFilled[i]=false;
             errMsg[i].style.display="block";
@@ -94,6 +95,7 @@ let identity=JSON.parse(localStorage.getItem("idNumber"))||101;
 let usersData=JSON.parse(localStorage.getItem("users"))||[];
 function registerData(e){
     e.preventDefault();
+    console.log("add user")
     let userExists=false;
     usersData.map((user)=>{
        if(user.email===inputs[2].value){
