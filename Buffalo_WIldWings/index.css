@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700;900&display=swap");
 *{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
@@ -140,4 +141,59 @@
     .navbar-toggler:focus{
         box-shadow: none;
     }
+}
+/* -------------Menu--------------- */
+.menu{
+    background: url(./images/menu-section-background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 100px;
+    margin-top: 150px;
+}
+.menuBox_bullet{
+    background-color: #ffc600;
+    padding: 5px;
+    width: 70px;
+}
+.menu_heading{
+    color: white;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.main_menu{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.menuItem{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width:425px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #382e2c;
+    border-radius: 10px;
+}
+.menuItem span{
+    text-align: center;
+    width: 50%;
+}
+#greatMenu_Title{
+    width:425px;
+    font-size: 48px;
+    font-weight: 900;
+    color: #382e2c;
+    line-height: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#greatMenu_Title span{
+    font-size: 28px;
+}
+#greatMenu_Title p{
+    margin: 0px;
 }
