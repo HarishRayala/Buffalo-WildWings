@@ -46,6 +46,34 @@
     display: none;
 }
 
+.owl-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 800px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .owl-carousel .item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .owl-carousel .item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .owl-carousel {
+      overflow-x: visible;
+    }
+    .owl-carousel .item {
+      margin-right: 0;
+    }
+  }
+  
 @media only screen and (max-width:991px){
     .startanorderbtn{
         display: none;
