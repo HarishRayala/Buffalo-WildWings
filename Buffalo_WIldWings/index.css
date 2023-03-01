@@ -172,10 +172,13 @@
     align-items: center;
     background-color: white;
     width:425px;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 900;
     color: #382e2c;
     border-radius: 10px;
+}
+.menu img{
+    width: 50%;
 }
 .menuItem span{
     text-align: center;
@@ -183,7 +186,7 @@
 }
 #greatMenu_Title{
     width:425px;
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 900;
     color: #382e2c;
     line-height: 33px;
@@ -192,7 +195,7 @@
     justify-content: center;
 }
 #greatMenu_Title span{
-    font-size: 28px;
+    font-size: 1.5rem;
 }
 #greatMenu_Title p{
     margin: 0px;
