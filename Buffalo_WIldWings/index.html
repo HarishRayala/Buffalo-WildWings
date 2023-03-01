@@ -86,12 +86,31 @@
 
     </div>
     <!-- our menu -->
-    <div>
-        
+    <div class="menu">
+        <div class="menuBox_bullet"></div>
+        <div class="menu_heading">OUR MENU</div>
+        <div class="main_menu">
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-
+<script type="module">
+    import {menu} from './Data/data.js';
+    console.log(menu);
+    let menuSection=document.querySelector(".main_menu");
+    menu.map((item)=>{
+        console.log(item.picture);
+        console.log(item.name);
+        let menuItem=document.createElement("div");
+        menuItem.setAttribute("class","menuItem");
+        let menuItemImg=document.createElement("img");
+        menuItemImg.src=item.picture;
+        let menuItemName=document.createElement("p");
+        menuItemName.textContent=item.name;
+        menuItem.append(menuItemImg,menuItemName);
+        menuSection.append(menuItem);
+    })
+</script>
 </html>

@@ -87,3 +87,32 @@
         box-shadow: none;
     }
 }
+/* ---------------Menu-------------- */
+.menu{
+    background: url(./images/menu-section-background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 100px;
+}
+.menuBox_bullet{
+    background-color: #ffc600;
+    padding: 5px;
+    width: 70px;
+}
+.menu_heading{
+    color: white;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.main_menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.menuItem{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width:425px;
+}
