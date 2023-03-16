@@ -241,7 +241,7 @@
         height: 180px;
     }
 }
-@media only screen and (max-width:350px){
+@media only screen and (max-width:428px){
     .carousel-container{
         margin-top: 3rem;
         display: inline-block;
@@ -268,14 +268,14 @@
     }
     .owl-carousel {
         display: flex;
-        gap:20px;
+        gap:10px;
         flex-wrap: nowrap;
         overflow-x: auto;
         width: 180px;
         -webkit-overflow-scrolling: touch;
         position: absolute;
         top: 20px;
-        left: 10rem;
+        left: 12rem;
         text-align: center;
         background-color: var(--bg-light);
         border-radius: 10px;
