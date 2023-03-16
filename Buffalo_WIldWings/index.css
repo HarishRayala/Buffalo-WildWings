@@ -355,3 +355,61 @@
 #greatMenu_Title p{
     margin: 0px;
 }
+/* ----------Footer------------ */
+.footer{
+    background-color: var(--bg-black);
+    color: var(--text-white);
+}
+.footer .footerImg{
+    background: url("./images/Logo_Watermark.avif");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+.footer .info{
+   display: flex;
+   justify-content: space-around;
+    padding: 30px 0px;
+}
+.footer .info .line{
+   width: 1px;
+   border: 1px dashed var(--text-white);
+}
+.footer .info .info_main{
+    font-size: 1.5rem;
+    font-weight: var(--semibold-font-weight);
+}
+.footer .info .info_main ul{
+    padding: 20px 10px;
+    font-size: 1rem;
+    font-weight: var(--normal-font-weight);
+}
+.footer .info .info_main ul li a{
+    color: var(--text-white);
+}
+.footer .info .info_main ul li::marker{
+    color:var(--text-yellow);
+}
+.footer .connect ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.footer .copyright{
+    background-color: var(--bg-yellow);
+    color: var(--text-black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0px;
+}
+.footer .copyright .right ul{
+    margin: auto;
+    display: flex;
+    list-style-type: none;
+    gap:10px;
+}
+.footer .copyright .right ul li a{
+    color: var(--text-black);
+}
