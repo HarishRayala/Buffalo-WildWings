@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700;900&display=swap");
+:root{
+    /* Background Color */
+    --bg-black:#382e2c;
+    --bg-yellow:#ffc600;
+    --bg-light:#e3e1db;
+
+    /* Text Color */
+    --text-black:#382e2c;
+    --text-yellow:#ffc600;
+    --text-white:#ffff;
+
+    /* Fonts */
+    --primary-font: "Barlow Semi Condensed", sans-serif;
+    --normal-font-weight:400;
+    --semibolf-font-weight:700;
+    --bold-font-weight:900;
+}

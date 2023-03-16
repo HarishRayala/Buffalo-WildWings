@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700;900&display=swap");
+@import url("./standard.css");
+
 *{
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: var(--primary-font);
 }
 .nav-item{
     font-size: 22px;
@@ -172,30 +173,32 @@
     align-items: center;
     background-color: white;
     width:425px;
-    font-size: 2rem;
+    height:150px;
+    font-size: 150%;
     font-weight: 900;
     color: #382e2c;
     border-radius: 10px;
+    padding: 0px 10px;
 }
-.menu img{
-    width: 50%;
+.menuItem img{
+    width: 40%;
 }
 .menuItem span{
     text-align: center;
-    width: 50%;
+    min-width: 50%;
 }
 #greatMenu_Title{
     width:425px;
-    font-size: 2rem;
+    font-size: 150%;
     font-weight: 900;
     color: #382e2c;
-    line-height: 33px;
+    line-height: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 #greatMenu_Title span{
-    font-size: 1.5rem;
+    font-size: 100%;
 }
 #greatMenu_Title p{
     margin: 0px;
