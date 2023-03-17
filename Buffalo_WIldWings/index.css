@@ -357,7 +357,9 @@
     display: flex;
     align-items: center;
     background-color: white;
-    width:425px;
+    /* width:425px; */
+    width: 30%;
+    /* height: 150%; */
     height:150px;
     font-size: 150%;
     font-weight: 900;
@@ -367,26 +369,63 @@
 }
 .menuItem img{
     width: 40%;
+    min-height: 70%;
 }
 .menuItem span{
     text-align: center;
     min-width: 50%;
 }
-#greatMenu_Title{
-    width:425px;
+.main_menu #greatMenu_Title{
+    /* width:425px; */
+    width: 30%;
     font-size: 150%;
     font-weight: 900;
+    background: none;
     color: #382e2c;
     line-height: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#greatMenu_Title span{
-    font-size: 100%;
+.main_menu #greatMenu_Title span{
+    font-size: 19px;
 }
 #greatMenu_Title p{
     margin: 0px;
+}
+@media screen and (max-width:900px){
+    .menuItem,#greatMenu_Title{
+        font-size: 20px;
+        height: 125px;
+    }
+    .menu{
+        padding: 10px 30px;
+    } 
+}
+@media screen and (max-width:760px){
+    .menu_heading{
+        font-size: 1.5rem;
+    }
+    .main_menu .menuItem,.main_menu #greatMenu_Title{
+        width: 40%;
+        height: 100px;
+        font-size: 18px;
+    }
+    .main_menu #greatMenu_Title span{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:489px){
+    .menu{
+        padding: 10px;
+    }
+    .main_menu .menuItem,.main_menu #greatMenu_Title{
+        font-size: 15px;
+        width: 90%;
+    }
+    .main_menu #greatMenu_Title span{
+        font-size: 10px;
+    }
 }
 /* ----------Footer------------ */
 .footer{
